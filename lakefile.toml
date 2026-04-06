@@ -1,0 +1,10 @@
+name = "fila"
+version = "0.1.0"
+defaultTargets = ["fila"]
+
+[[lean_lib]]
+name = "Fila"
+
+[[lean_exe]]
+name = "fila"
+root = "Main"
