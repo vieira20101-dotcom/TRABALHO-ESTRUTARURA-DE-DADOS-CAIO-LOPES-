@@ -115,3 +115,77 @@ Deve conter:
 - Alberto (Julia): https://github.com/usuario/edc-p1-2026-projeto-julia  
 - Caio (Lean): https://github.com/usuario/edc-p1-2026-projeto-lean  
 ```
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Sistema de Fila de Senhas em Lean 4
+
+Este projeto é uma implementação simples de um sistema de gerenciamento de fila de senhas, desenvolvido em **Lean 4**. O sistema permite adicionar pessoas à fila, atendê-las, buscar posições e visualizar o tamanho atual da fila através de uma interface de linha de comando (CLI).
+
+## 🚀 Funcionalidades
+
+- **Adicionar (1):** Insere uma nova pessoa na fila com um ID incremental.
+- **Atender (2):** Remove e exibe a próxima pessoa a ser atendida (primeiro a entrar, primeiro a sair).
+- **Buscar (3):** Localiza uma pessoa pelo nome na fila e retorna seu ID.
+- **Tamanho (4):** Exibe o número total de pessoas aguardando na fila.
+- **Sair (0):** Encerra o sistema.
+
+---
+
+## 🛠️ Pré-requisitos
+
+Para executar este projeto, você precisará ter o **Lean 4** instalado em sua máquina.
+
+1. **Instalar elan:** O gerenciador de versões do Lean.
+   - No Windows (PowerShell):
+     ```powershell
+     curl -sSfL https://github.com/leanprover/elan/releases/download/v3.0.0/elan-init.ps1 | powershell -c -
+     ```
+   - No Linux/macOS:
+     ```bash
+     curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh
+     ```
+
+2. **Reiniciar o terminal** após a instalação para que o comando `lake` esteja disponível.
+
+---
+
+## 🏗️ Instalação e Execução
+
+Siga os passos abaixo para iniciar o projeto:
+
+### 1. Clonar ou Acessar o Diretório
+Navegue até a pasta do projeto:
+```bash
+cd fila
+```
+
+### 2. Compilar e Executar
+A forma mais rápida de iniciar o sistema é usando o comando `lake exe`:
+```bash
+lake exe fila
+```
+
+Ou, se preferir compilar manualmente antes de rodar:
+```bash
+lake build
+./.lake/build/bin/fila
+```
+
+---
+
+## 📂 Estrutura do Projeto
+
+- `Main.lean`: Contém a lógica principal do programa, o menu interativo e as definições das estruturas de dados.
+- `lakefile.toml`: Arquivo de configuração do gerenciador de pacotes Lake.
+- `lean-toolchain`: Especifica a versão exata do Lean utilizada no projeto.
+
+---
+
+## 📝 Exemplo de Uso
+
+Ao iniciar o programa, você verá o menu:
+```text
+Fila atual: Vazia
+1:Adicionar 2:Atender 3:Buscar 4:Tamanho 0:Sair
+Opção: 
