@@ -181,6 +181,9 @@ lake build
 - `lean-toolchain`: Especifica a versão exata do Lean utilizada no projeto.
 
 ---
+ ## video desenvolvimento 
+ https://youtu.be/0To_BS1lF8I
+--- 
 
 ## 📝 Exemplo de Uso
 
